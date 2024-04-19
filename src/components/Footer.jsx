@@ -21,19 +21,22 @@ const Struct = () => {
     ["FAQ", "shipping", "returns", "order status", "payment options"],
     ["watch", "bag", "shoes", "dress"],
   ];
-  
 
   return headData.map((head, index) => {
     return (
-      <div key={index}>
+      <div className="footer-col" key={index}>
         {console.log(head)}
         <h4 key={head}>{head}</h4>
-        {
-          data[index].map((item,idx) => {
+        <ul>
+          {data[index].map((item, idx) => {
             console.log(item);
-            return <li key={idx}>{item}</li>
-          })
-        }
+            return (
+              <li key={idx}>
+                <a href="">{item}</a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     );
   });
