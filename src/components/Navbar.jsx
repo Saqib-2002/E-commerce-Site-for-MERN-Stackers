@@ -3,6 +3,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <NavItems />
+        <RightNav/>
       </nav>
     </>
   );
@@ -20,5 +21,13 @@ const NavItems = () => {
     );
   });
 };
+
+const RightNav = ()=> {
+  return (
+    <div className="right-nav">
+      <a href="#">Sign Up</a>
+    </div>
+  )
+}
 
 export default Navbar;

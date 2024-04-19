@@ -27,3 +27,16 @@ body {
   transition: all 0.2s ease-in;
 }
 
+.right-nav {
+  padding: 25px 25px;
+}
+
+.right-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.right-nav a:hover {
+  color: #b0bec5;
+  transition: all 0.2s ease-in;
+}
