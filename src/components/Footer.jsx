@@ -21,30 +21,21 @@ const Struct = () => {
     ["FAQ", "shipping", "returns", "order status", "payment options"],
     ["watch", "bag", "shoes", "dress"],
   ];
+  
 
-  const head = headData.map((head, index) => {
-    // console.log(index, head);
-    return <h4 key={index}>{head}</h4>;
-  });
-
-  return data.map((data, index) => {
-    // console.log(index);
-
-    const list = data.map((items, index) => {
-      //   console.log(index, items);
-      return (
-        <li key={index}>
-          <a href="#">{items}</a>
-        </li>
-      );
-    });
-
+  return headData.map((head, index) => {
     return (
-      <div className="footer-col" key={index}>
-        <ul>{list}</ul>
+      <div key={index}>
+        {console.log(head)}
+        <h4 key={head}>{head}</h4>
+        {
+          data[index].map((item,idx) => {
+            console.log(item);
+            return <li key={idx}>{item}</li>
+          })
+        }
       </div>
     );
   });
 };
-
 export default Footer;
